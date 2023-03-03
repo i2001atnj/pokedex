@@ -34,8 +34,8 @@ const Pokedex = (props) => {
         </div>
       ) : (
         <div className="pokedex-grid">
-          {pokemons.map((pokemon, idx) => {
-            return <Pokemon pokemon={pokemon} key={pokemon.name} />;
+          {pokemons.map((pokemon) => {
+            return <Pokemon pokemon={pokemon} key={pokemon.name}/>;
           })}
         </div>
       )}

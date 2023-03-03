@@ -2,16 +2,16 @@ import React from "react";
 import SearchVector from "../assets/SearchVector.svg"
 import SortButton from "./SortButton"
 
-const { useState } = React;
-
 const Searchbar = (props) => {
   const { onSearch } = props;
-  const [search, setSearch] = useState("");
+  let search = "";
 
   const onChange = (e) => {
-    setSearch(e.target.value);
+    search = e.target.value
     if (e.target.value.length === 0) {
       onSearch(null);
+    } else {
+      onSearch(search)
     }
   };
 
