@@ -4,7 +4,6 @@ import RightVector from '../assets/RightVector.svg'
 
 const Pagination = (props) => {
   const { onLeftClick, onRightClick, page, totalPages } = props;
-
   return (
     <div className="pagination">
       <button className="pagination-btn" onClick={onLeftClick}><img src={ LeftVector } alt=""/></button>
