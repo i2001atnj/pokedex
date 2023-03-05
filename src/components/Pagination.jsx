@@ -6,9 +6,9 @@ const Pagination = (props) => {
   const { onLeftClick, onRightClick, page, totalPages } = props;
   return (
     <div className="pagination">
-      <button className="pagination-btn" onClick={onLeftClick}><img src={ LeftVector } alt=""/></button>
+      <button className="pagination-btn" onClick={onLeftClick}><img src={ LeftVector } alt="" id="left"/></button>
       <div className="pagination-info">{page} / {totalPages}</div>
-      <button className="pagination-btn" onClick={onRightClick}><img src={ RightVector } alt=""/></button>
+      <button className="pagination-btn" onClick={onRightClick}><img src={ RightVector } alt="" id="right"/></button>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles.css";
-import Navbar from "./Navbar";
-import Searchbar from "./Searchbar";
-import Pokedex from "./Pokedex";
+import Navbar from "../components/Navbar";
+import Searchbar from "../components/Searchbar";
+import Pokedex from "../components/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "../api";
 
 const { useState, useEffect } = React;
@@ -63,7 +63,7 @@ return (
     <div>
       <Navbar />
       <div className="Homepage">
-        <Searchbar onSearch={onSearch} />
+        <Searchbar onSearch={onSearch}/>
         {notFound ? (
           <div className="not-found-text">
             <p>Pokemon not found...</p>
