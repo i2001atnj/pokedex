@@ -9,6 +9,9 @@ import HeightVector from '../assets/HeightVector.svg'
 import Divider from '../assets/Divider.svg'
 
 const PokemonPage = () => {
+
+  
+
   return (
     <div className='PokemonPage'>
       <div className='PokemonPage-TitleSection'>
