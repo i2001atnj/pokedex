@@ -6,6 +6,7 @@ import ChevronRightVector from '../assets/ChevronRightVector.svg'
 import PokemonPageImage from '../assets/PokemonPageImage.svg'
 import WeightVector from '../assets/WeightVector.svg'
 import HeightVector from '../assets/HeightVector.svg'
+import Divider from '../assets/Divider.svg'
 
 const PokemonPage = () => {
   return (
@@ -40,6 +41,7 @@ const PokemonPage = () => {
             </div>
             <p id='AtributeName'>Weight</p>
           </div>
+          <img src={ Divider } alt="" />
           <div className='Atribute'>
             <div className='AtributeInfo'>
               <img src={ HeightVector } alt="" />
@@ -47,6 +49,7 @@ const PokemonPage = () => {
             </div>
             <p id='AtributeName'>Weight</p>
           </div>
+          <img src={ Divider } alt="" />
           <div className='Atribute'>
             <div className='AtributeInfo MovesInfo'>
               <p>Ability 1</p>
@@ -56,7 +59,7 @@ const PokemonPage = () => {
           </div>
         </div>
         <p id='PokemonInfo'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, similique ratione. Dolores voluptatibus nesciunt cupiditate eum optio pariatur veritatis odit. Nesciunt voluptatibus quam nostrum quidem aperiam ipsam rem numquam adipisci?</p>
-        <p id='StatsTitle'>BaseStats</p>
+        <p id='StatsTitle'>Base Stats</p>
         <div className='Stats'>
           <div className='Stat HP'>HP</div>
           <div className='Stat ATK'>ATK</div>
