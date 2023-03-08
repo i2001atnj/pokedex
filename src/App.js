@@ -5,10 +5,12 @@ import PokemonPage from './pages/PokemonPage'
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={ <Homepage/> } />
-      <Route path='pokemon/:id' element={ <PokemonPage/> } />
-    </Routes>
+    <div className='App'>
+      <Routes>
+        <Route path='/' element={ <Homepage/> } />
+        <Route path='pokemon/:name' element={ <PokemonPage/> } />
+      </Routes>
+    </div>
   )
 }
 

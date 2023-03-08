@@ -1,46 +1,59 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import ReturnVector from '../assets/ReturnVector.svg'
 import ChevronLeftVector from '../assets/ChevronLeftVector.svg'
 import ChevronRightVector from '../assets/ChevronRightVector.svg'
-import PokemonPageImage from '../assets/PokemonPageImage.svg'
 import WeightVector from '../assets/WeightVector.svg'
 import HeightVector from '../assets/HeightVector.svg'
 import Divider from '../assets/Divider.svg'
 
 const PokemonPage = () => {
 
-  
+  const [pokemon, setPokemon] = useState(null)
+
+  const { name } = useParams()
+
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    .then((r) => r.json())
+    .then((json) => {
+      setPokemon(json)
+    })
+  }, [name])
+
+  if (!pokemon) {
+    return null;
+  }
 
   return (
     <div className='PokemonPage'>
       <div className='PokemonPage-TitleSection'>
         <Link to="/"><img src={ ReturnVector } alt=""/></Link>
-        <p id='TitleName'>Pokemon Name</p>
-        <p id='TitleID'>#ID</p>
+        <p id='TitleName'>{ pokemon.name }</p>
+        <p id='TitleID'># { pokemon.id }</p>
       </div>
       <div className='PokemonPage-ImageSection'>
         <button id='ChevronLeft'><img src={ ChevronLeftVector } alt="" /></button>
         <div className='Silouette'>
-          <img src={ PokemonPageImage } alt=""/>
+          <img src={ pokemon.sprites.other["official-artwork"].front_default } alt=""/>
         </div>
         <button id='ChevronRight'><img src={ ChevronRightVector } alt="" /></button>
       </div>
       <div className='PokemonPage-CardSection'>
         <div className='Types'>
           <div className='Type'>
-            <p>Type</p>
+            <p>{ pokemon.types[0].type.name }</p>
           </div>
           <div className='Type'>
-            <p>Type</p>
+            <p>{ pokemon.types[1].type.name }</p>
           </div>
         </div>
         <p id='About'>About</p>
         <div className='Atributes'>
           <div className='Atribute'>
             <div className='AtributeInfo'>
-              <img src={ WeightVector } alt="" />
-              <p id='p'>9,9 kg</p>
+              <img src={ WeightVector } alt=""/>
+              <p id='p'>{ pokemon.weight } kg</p>
             </div>
             <p id='AtributeName'>Weight</p>
           </div>
@@ -48,9 +61,9 @@ const PokemonPage = () => {
           <div className='Atribute'>
             <div className='AtributeInfo'>
               <img src={ HeightVector } alt="" />
-              <p id='p'>9,9 kg</p>
+              <p id='p'>{ pokemon.height } m</p>
             </div>
-            <p id='AtributeName'>Weight</p>
+            <p id='AtributeName'>Height</p>
           </div>
           <img src={ Divider } alt="" />
           <div className='Atribute'>
