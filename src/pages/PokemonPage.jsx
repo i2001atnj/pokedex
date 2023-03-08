@@ -11,8 +11,7 @@ const PokemonPage = () => {
 
   const [pokemon, setPokemon] = useState(null)
 
-  const { name } = useParams()
-
+  const {name} = useParams()
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then((r) => r.json())
@@ -26,11 +25,11 @@ const PokemonPage = () => {
   }
 
   return (
-    <div className='PokemonPage'>
+    <div className='PokemonPage' style={ { background: "#B8B8B8" } } >
       <div className='PokemonPage-TitleSection'>
         <Link to="/"><img src={ ReturnVector } alt=""/></Link>
         <p id='TitleName'>{ pokemon.name }</p>
-        <p id='TitleID'># { pokemon.id }</p>
+        <p id='TitleID'>#00{ pokemon.id }</p>
       </div>
       <div className='PokemonPage-ImageSection'>
         <button id='ChevronLeft'><img src={ ChevronLeftVector } alt="" /></button>
@@ -68,13 +67,13 @@ const PokemonPage = () => {
           <img src={ Divider } alt="" />
           <div className='Atribute'>
             <div className='AtributeInfo MovesInfo'>
-              <p>Ability 1</p>
-              <p>Ability 2</p>
+              <p>{ pokemon.abilities[1].ability.name }</p>
+              <p>{ pokemon.abilities[0].ability.name }</p>
             </div>
             <p id='AtributeName'>Moves</p>
           </div>
         </div>
-        <p id='PokemonInfo'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, similique ratione. Dolores voluptatibus nesciunt cupiditate eum optio pariatur veritatis odit. Nesciunt voluptatibus quam nostrum quidem aperiam ipsam rem numquam adipisci?</p>
+        <p id='PokemonInfo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat quam rem exercitationem? Natus amet ex cum, explicabo harum dolor voluptatibus velit nostrum dignissimos soluta exercitationem similique sed tempora assumenda?</p>
         <p id='StatsTitle'>Base Stats</p>
         <div className='Stats'>
           <div className='Stat HP'>HP</div>
