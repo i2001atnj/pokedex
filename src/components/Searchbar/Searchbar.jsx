@@ -1,6 +1,7 @@
 import React from "react";
-import SearchVector from "../assets/SearchVector.svg"
-import SortButton from "./SortButton"
+import './Searchbar.css'
+import { SearchVector } from "../../assets/Assets"
+import { SortButton } from "../Components"
 
 const Searchbar = (props) => {
   const { onSearch } = props;
@@ -25,7 +26,7 @@ const Searchbar = (props) => {
         <button onClick={onClick}><img src={ SearchVector } alt="" /></button>
         <input placeholder="Search" onChange={onChange} className="search-box"/>
       </div>
-      <div className="sort-button">
+      <div>
         <SortButton/>
       </div>
     </div>

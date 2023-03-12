@@ -1,0 +1,25 @@
+.navbar {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--Colors-Identity-Primary);
+    justify-content: center;
+}
+
+.navbar img {
+    height: 30px;
+}
+
+.navbar h1 {
+    color: var(--Colors-Grayscale-White);
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 508px) {
+    .navbar {
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+}

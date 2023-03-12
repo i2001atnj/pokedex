@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './PokemonCard.css'
 
-const Pokemon = (props) => {
+const PokemonCard = (props) => {
   const { pokemon } = props
   return (
     <>
-      <Link to={`/pokemon/${pokemon.name}`} className="Link">
+      <Link to={`/pokemon/${pokemon.name}`} style={{textDecoration: "none"}}>
         <div className="pokemon-card">
           <div className="pokemon-id"><p>#{pokemon.id}</p></div>
           <img src={ pokemon.sprites.other["official-artwork"].front_default } alt={ pokemon.name }/>
@@ -16,4 +17,4 @@ const Pokemon = (props) => {
   );
 };
 
-export default Pokemon;
+export default PokemonCard;

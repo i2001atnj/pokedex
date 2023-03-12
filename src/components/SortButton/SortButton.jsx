@@ -1,9 +1,10 @@
 import React from 'react'
-import SortVector from '../assets/SortVector.svg'
+import './SortButton.css'
+import { SortVector } from '../../assets/Assets'
 
 function SortButton() {
   return (
-    <div>
+    <div className='sort-button'>
       <button><img src={ SortVector } alt=""/></button>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Homepage from './pages/Homepage'
-import PokemonPage from './pages/PokemonPage'
+import './styles/App.css'
+import { Homepage, PokemonPage } from './pages/Pages'
 
 function App() {
   return (

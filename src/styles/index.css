@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --Colors-Identity-Primary: #DC0A2D;
+    --Colors-Grayscale-Dark: #212121;
+    --Colors-Grayscale-Medium: #666666;
+    --Colors-Grayscale-Light: #E0E0E0;
+    --Colors-Grayscale-Background: #EFEFEF;
+    --Colors-Grayscale-White: #FFFFFF;
+}

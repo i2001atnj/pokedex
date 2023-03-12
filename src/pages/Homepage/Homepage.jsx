@@ -1,9 +1,7 @@
 import React from "react";
-import "../styles.css";
-import Navbar from "../components/Navbar";
-import Searchbar from "../components/Searchbar";
-import Pokedex from "../components/Pokedex";
-import { getPokemonData, getPokemons, searchPokemon } from "../api";
+import "./Homepage.css";
+import { Navbar, Searchbar, Pokedex } from '../../components/Components'
+import { getPokemonData, getPokemons, searchPokemon } from "../../components/API";
 
 const { useState, useEffect } = React;
 
@@ -61,7 +59,7 @@ export default function App() {
 
 return (
     <div>
-      <Navbar />
+      <Navbar/>
       <div className="Homepage">
         <Searchbar onSearch={onSearch}/>
         {notFound ? (

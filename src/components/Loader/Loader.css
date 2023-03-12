@@ -1,0 +1,106 @@
+.loading-page{
+    text-align: center;
+    height: 36.2rem;
+    position: relative;
+    width: 100%;
+}
+
+.item body{
+    background-color: var(--Colors-Identity-Primary);
+    overflow: hidden;
+}
+  
+.item{ 
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 100px;
+    animation: loading 2s infinite;
+    width: 120px;
+    height: 120px;
+}
+ 
+.ball{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 6px solid var(--Colors-Grayscale-Dark); 
+    z-index: 100;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;  
+    position: absolute;
+}
+  
+.half-ball{
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 40px;
+    bottom:0;
+    z-index: 0;
+    position: absolute;
+    background-color: var(--Colors-Grayscale-White);
+    border-radius: 0 0 90px 90px;
+    width: 90px;
+    height: 50px;
+}
+  
+.horizon{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom:0;    
+    margin-top: auto;
+    border-radius: 0px;
+    width: 90px;
+    height: 14px;
+    background-color: var(--Colors-Grayscale-Dark);
+    z-index: 3;
+}
+  
+.big-button{
+    z-index: 4;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;
+    border-radius: 50%;
+    border: 6px solid var(--Colors-Grayscale-Dark);
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: var(--Colors-Grayscale-White);
+}
+  
+.small-button{
+    z-index: 5;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;
+    border-radius: 50%;
+    border: 4px solid var(--Colors-Grayscale-Dark);
+    position: absolute;
+    height: 16px;
+    width: 16px; 
+    background-color: var(--Colors-Grayscale-White);
+}
+
+@keyframes loading {
+    0% {transform: translate(0, 0) rotate(0)}
+    25% {transform: translate(-8px, 0) rotate(-18deg)}
+    33% {transform: translate(8px, 0) rotate(18deg)}
+    50% {transform: translate(-8px, 0) rotate(-12deg)}
+    60% {transform: translate(8px, 0) rotate(18deg)}
+    100% {transform: translate(0, 0) rotate(0)}
+}

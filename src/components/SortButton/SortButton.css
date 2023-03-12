@@ -1,0 +1,33 @@
+.sort-button {
+    background: white;
+    box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+  
+.sort-button:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+  
+.sort-button button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 20px;
+    margin-left: 5px;
+}
+  
+.sort-button button img {
+    position: relative;
+    left: 5px;
+    top: 6px;
+    height: 10px;
+}

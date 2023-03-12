@@ -1,0 +1,364 @@
+.PokemonPage {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.PokemonPage-TitleSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+.PokemonPage-TitleSection img {
+    height: 27px;
+    position: relative;
+    top: 5px;
+}
+
+.PokemonPage-TitleSection img:hover {
+    filter: brightness(1.5);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Pokemon Name */
+
+.PokemonPage-TitleSection #TitleName {
+    font-size: 26px;
+    position: relative;
+    font-weight: 700;
+    text-align: start;
+    text-transform: capitalize;
+}
+
+/* Pokemon ID */
+
+.PokemonPage-TitleSection #TitleID {
+    position: relative;
+    top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Pokemon image section */
+
+.PokemonPage-ImageSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+.PokemonPage-ImageSection button {
+    border: none;
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 50px;
+}
+  
+.PokemonPage-ImageSection button img {
+    height: 30px;
+}
+  
+.PokemonPage-ImageSection button:hover {
+    filter: brightness(1.3);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+  
+/* Arrows */
+  
+#ChevronLeft {
+    cursor: pointer;
+    position: relative;
+    left: 15px;
+}
+  
+#ChevronRight {
+    cursor: pointer;
+    position: relative;
+    right: 15px;
+}
+  
+/* Image */
+  
+.Silouette {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+    height: 200px;
+}
+  
+.Silouette img {
+    height: 200px;
+}
+  
+.Silouette:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+  
+/* Card Section */
+  
+.PokemonPage-CardSection {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    margin: 0px 4px 4px 4px;
+    border-radius: 10px;
+    position: relative;
+    isolation: isolate;
+    padding: 30px 0px 40px 0px;
+}
+  
+.Types {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+}
+  
+.Type {
+    background: #666666;
+    border-radius: 15px;
+    width: fit-content;
+    height: 32px;
+    margin: 0 10px;
+    text-align: center;
+    padding: 0 14px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+  
+.Type p {
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+  
+#About {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #B8B8B8;;
+}
+
+  
+.Atribute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+  
+.AtributeInfo {
+    display: flex;
+    text-align: center;
+    height: 45px;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.AtributeInfo img {
+    position: relative;
+    left: 12px;
+    top: 12px;
+    height: 17px;
+}
+  
+.AtributeInfo p {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+}
+  
+#AtributeName {
+    color: #B8B8B8;
+    margin-top: 5px;
+}
+  
+#p {
+    margin-top: 10px;
+}
+  
+.MovesInfo {
+    flex-direction: column !important;
+    align-items: center;
+    text-transform: capitalize;
+}
+  
+#PokemonInfo {
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 16px;
+}
+  
+#StatsTitle {
+    text-align: center;
+    font-weight: 700;
+    color: #B8B8B8;
+    margin-top: 20px;
+}
+  
+.Stats {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+}
+  
+.StatsTitles {
+    font-weight: 700;
+    position: relative;
+}
+  
+.StatsDivider {
+    height: 100%;
+    padding: 0 2px;
+}
+  
+.StatsDivider img {
+    height: 150px;
+    width: 10px;
+}
+  
+.StatsBars {
+    height: fit-content;
+}
+  
+.animated-progress {
+    width: 15rem;
+    height: 6px;
+    border-radius: 5px;
+    margin: 6px 10px 15px 15px;
+    background: #EFEFEFEF;
+    overflow: hidden;
+    display: flex;
+}
+
+@media screen and (max-width: 2000px) {
+    .PokemonPage-ImageSection {
+        justify-content: center;
+    }
+    
+    .PokemonPage-ImageSection button {
+        margin: 0 70px;
+    }
+    
+      
+    .Atributes {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+
+    .AtributeInfo {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .Stats {
+        font-size: 13px;
+        justify-content: center;
+        align-items: center;
+        text-align: end;
+    }
+
+    .StatsDivider {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .StatsDivider img {
+        height: 110px;
+    }
+    
+    #PokemonInfo {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 508px) {
+    .PokemonPage-TitleSection #TitleName {
+      font-size: 26px;
+    }
+  
+    .PokemonPage #About {
+      font-size: 18px;
+    }
+  
+    .Atributes {
+        width: 95%;
+    }
+
+    .AtributeInfo img {
+      height: 15px;
+      margin-top: 6px;
+      margin-right: 12px;
+    }
+  
+    .AtributeInfo {
+      justify-content: center;
+    }
+  
+    .AtributeInfo #p {
+      position: relative;
+      top: 7px;
+      font-size: 14px;
+    }
+  
+    #PokemonInfo {
+      font-size: 14px;
+    }
+  
+    #StatsTitle {
+      font-size: 18px;
+    }
+  
+    .Stats {
+      font-size: 13px;
+      justify-content: center;
+      align-items: center;
+      text-align: end;
+    }
+  
+    .StatsTitles {
+      font-size: 13px;
+    }
+  
+    .StatsBars {
+      margin-top: 10px;
+    }
+  
+    .StatsDivider {
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  
+    .StatsDivider img {
+      height: 110px;
+    }
+  
+    .Atribute {
+      width: 70px;
+    }
+  
+    #AtributeName {
+      font-size: 13px;
+    }
+}  
